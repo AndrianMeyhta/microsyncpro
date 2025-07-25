@@ -1,6 +1,6 @@
 # Microsynpro Full-Stack Application
 
-This is a boilerplate for a full-stack web application named `microsynpro`, featuring a Go backend (Gin), a React frontend (TypeScript), and a PostgreSQL database, all orchestrated with Docker Compose.
+This is a full-stack web application named `microsynpro`, featuring a Go backend (Gin), a React frontend (TypeScript), and a PostgreSQL database, all orchestrated with Docker Compose.
 
 ## Project Structure
 
@@ -132,55 +132,3 @@ For local development without Docker Compose, you'll need a running PostgreSQL i
     ```
 
     Then, manually run the `init.sql` script against this database.
-
-## API Endpoints
-
-### Backend
-
--   `POST /api/v1/register`
-    -   **Request Body (JSON):**
-        ```json
-        {
-            "email": "newuser@example.com",
-            "password": "securepassword"
-        }
-        ```
-    -   **Response (JSON):**
-        ```json
-        {
-            "message": "User registered successfully"
-        }
-        ```
-
--   `POST /api/v1/login`
-    -   **Request Body (JSON):**
-        ```json
-        {
-            "email": "test@example.com",
-            "password": "password123"
-        }
-        ```
-    -   **Response (JSON):**
-        ```json
-        {
-            "token": "your.jwt.token.here"
-        }
-        ```
-
--   `GET /api/v1/profile` (Protected Route)
-    -   **Headers:** `Authorization: Bearer <your.jwt.token.here>`
-    -   **Response (JSON):**
-        ```json
-        {
-            "id": "<user-id>",
-            "email": "<user-email>",
-            "message": "This is a protected route!"
-        }
-        ```
-
-## Next Steps
-
--   Expand frontend features beyond login/registration and dashboard.
--   Add more robust error handling and validation.
--   Implement refresh tokens for better security.
--   Add more API endpoints and database models.
