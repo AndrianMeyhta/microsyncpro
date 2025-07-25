@@ -1,11 +1,11 @@
-# Microsynpro Full-Stack Application
+# Microsyncpro Full-Stack Application
 
-This is a full-stack web application named `microsynpro`, featuring a Go backend (Gin), a React frontend (TypeScript), and a PostgreSQL database, all orchestrated with Docker Compose.
+This is a full-stack web application named `microsyncpro`, featuring a Go backend (Gin), a React frontend (TypeScript), and a PostgreSQL database, all orchestrated with Docker Compose.
 
 ## Project Structure
 
 ```
-microsynpro/
+microsyncpro/
 ├── backend/             # Go backend application
 │   ├── main.go
 │   ├── go.mod
@@ -56,10 +56,10 @@ cp .env.example .env
 
 This method provides live-reload for both backend and frontend, and manages the database.
 
-1.  Navigate to the root of the `microsynpro` directory:
+1.  Navigate to the root of the `microsyncpro` directory:
 
     ```bash
-    cd microsynpro
+    cd microsyncpro
     ```
 
 2.  Build and start the services:
@@ -81,7 +81,7 @@ This method provides live-reload for both backend and frontend, and manages the 
 1.  Navigate to the `backend` directory:
 
     ```bash
-    cd microsynpro/backend
+    cd microsyncpro/backend
     ```
 
 2.  Install `air` for live-reload (if you haven't already):
@@ -103,7 +103,7 @@ This method provides live-reload for both backend and frontend, and manages the 
 1.  Navigate to the `frontend` directory:
 
     ```bash
-    cd microsynpro/frontend
+    cd microsyncpro/frontend
     ```
 
 2.  Install dependencies:
@@ -128,7 +128,7 @@ For local development without Docker Compose, you'll need a running PostgreSQL i
 -   Run a PostgreSQL container manually:
 
     ```bash
-    docker run --name microsynpro-db -e POSTGRES_USER=user -e POSTGRES_PASSWORD=password -e POSTGRES_DB=microsynpro_db -p 5432:5432 -d postgres:latest
+    docker run --name microsyncpro-db -e POSTGRES_USER=user -e POSTGRES_PASSWORD=password -e POSTGRES_DB=microsyncpro_db -p 5432:5432 -d postgres:latest
     ```
 
     Then, manually run the `init.sql` script against this database.
